@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Realizar Servicio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="/logo.jpg"
+              alt="Logo"
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+            Bronx Studio
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" data-page="controller" href="#">Controller</a>
+              <a class="nav-link" data-page="dtos" href="#">Dtos</a>
+              <a class="nav-link" data-page="model" href="#">Model</a>
+              <a class="nav-link" data-page="repository" href="#">Repository</a>
+              <a class="nav-link" data-page="service" href="#">Service</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane" id="controller">
+          <h1>Controller</h1>
+          <p>
+            El Controller es la puerta de entrada de tu aplicación. Recibe las
+            peticiones web (HTTP como GET, POST) , las mapea a funciones
+            específicas, extrae los datos necesarios y delega la tarea a la capa
+            de Service (lógica de negocio). Finalmente, recibe la respuesta del
+            Service, la formatea y la envía de vuelta al cliente con el código
+            de estado HTTP apropiado (200 OK, 201 Created, etc.).
+          </p>
+          <h6>Ejemplo</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/controller.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+        </div>
+        <div class="tab-pane" id="dtos">
+          <h1>Dtos</h1>
+          <p>
+            El DTO (Data Transfer Object) es un objeto plano que actúa como un
+            contrato de datos o mensajero. Se usa para transferir solo la
+            información necesaria entre las capas (Controller, Service) y el
+            cliente, lo que garantiza la seguridad al no exponer la entidad
+            completa (Model) y facilita el desacoplamiento de tu aplicación.
+          </p>
+          <h6>Ejemplo</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/dto.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+        </div>
+        <div class="tab-pane" id="model">
+          <h1>Model</h1>
+          <p>
+            El Model (Entidad) es la representación de una tabla en la base de
+            datos. Es la clase que define la estructura de los datos y su estado
+            persistente, sirviendo como la fuente de verdad de la información
+            dentro de la capa de persistencia (Repository).
+          </p>
+          <h6>Ejemplo</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/model.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+        </div>
+        <div class="tab-pane" id="repository">
+          <h1>Repository</h1>
+          <p>
+            El Repository es la capa de persistencia responsable de comunicarse
+            con la base de datos. Sirve como un contrato para las operaciones
+            CRUD y permite consultas personalizadas utilizando el Model
+            (Entidad).
+          </p>
+          <h6>Ejemplo</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/repository.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+        </div>
+        <div class="tab-pane" id="service">
+          <h1>Service</h1>
+          <p>
+            El Service es la capa de lógica de negocio de la aplicación. Ejecuta
+            todas las reglas y validaciones del sistema, siendo llamado por el
+            Controller y coordinando las interacciones con el Repository para
+            asegurar que las operaciones se realicen correctamente.
+          </p>
+          <h6>Ejemplo</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/service.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+          <p></p>
+          <h6>Crear</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/crear.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+          <p></p>
+          <h6>Obtener Todos</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/obtenerTodos.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+          <p></p>
+          <h6>Obtener Por Id</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/obtenerPorId.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+          <p></p>
+          <h6>Actualizar</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/actualizar.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+          <p></p>
+          <h6>Eliminar</h6>
+          <div class="col-lg-6 col-md-8">
+            <span class="border border-light-subtle"
+              ><img
+                src="/eliminar.png"
+                class="img-fluid rounded shadow-lg"
+                alt="Descripción de la imagen"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
