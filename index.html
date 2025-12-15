@@ -194,6 +194,25 @@
         </div>
       </div>
     </div>
+    <div class="tab-pane" id="dtos">
+          <h1>Properities</h1>
+          <p>
+            # H2 en memoria
+spring.datasource.url=jdbc:h2:mem:db_biblioteca
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# JPA / Hibernate
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# Consola web de H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+          </p>
+        </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -202,4 +221,5 @@
     <script src="app.js"></script>
   </body>
 </html>
+
 
