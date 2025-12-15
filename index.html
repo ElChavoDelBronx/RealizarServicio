@@ -10,6 +10,12 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <style>
+        /* Estilo para asegurar que solo una pestaña esté activa al inicio */
+        .tab-pane:not(.active) {
+            display: none;
+        }
+    </style>
   </head>
   <body>
     <div>
@@ -25,12 +31,14 @@
             />
             Bronx Studio
           </a>
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+          </button>
+          
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" data-page="controller" href="#">Controller</a>
+              <a class="nav-link active" data-page="controller" href="#">Controller</a>
               <a class="nav-link" data-page="dtos" href="#">Dtos</a>
               <a class="nav-link" data-page="model" href="#">Model</a>
               <a class="nav-link" data-page="repository" href="#">Repository</a>
@@ -41,13 +49,14 @@
         </div>
       </nav>
     </div>
-    <div class="container">
+    <div class="container mt-4">
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane" id="controller">
+        
+        <div class="tab-pane active" id="controller">
           <h1>Controller</h1>
           <p>
             El Controller es la puerta de entrada de tu aplicación. Recibe las
-            peticiones web (HTTP como GET, POST) , las mapea a funciones
+            peticiones web (HTTP como GET, POST), las mapea a funciones
             específicas, extrae los datos necesarios y delega la tarea a la capa
             de Service (lógica de negocio). Finalmente, recibe la respuesta del
             Service, la formatea y la envía de vuelta al cliente con el código
@@ -59,11 +68,12 @@
               ><img
                 src="controller.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de un Controller en Spring Boot"
               />
             </span>
           </div>
         </div>
+        
         <div class="tab-pane" id="dtos">
           <h1>Dtos</h1>
           <p>
@@ -79,11 +89,12 @@
               ><img
                 src="dto.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de un DTO"
               />
             </span>
           </div>
         </div>
+        
         <div class="tab-pane" id="model">
           <h1>Model</h1>
           <p>
@@ -98,11 +109,12 @@
               ><img
                 src="model.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de un Model (Entidad)"
               />
             </span>
           </div>
         </div>
+        
         <div class="tab-pane" id="repository">
           <h1>Repository</h1>
           <p>
@@ -117,11 +129,12 @@
               ><img
                 src="repository.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de un Repository"
               />
             </span>
           </div>
         </div>
+        
         <div class="tab-pane" id="service">
           <h1>Service</h1>
           <p>
@@ -136,7 +149,7 @@
               ><img
                 src="service.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de Service general"
               />
             </span>
           </div>
@@ -147,7 +160,7 @@
               ><img
                 src="crear.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de método Crear"
               />
             </span>
           </div>
@@ -158,7 +171,7 @@
               ><img
                 src="obtenerTodos.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de método Obtener Todos"
               />
             </span>
           </div>
@@ -169,7 +182,7 @@
               ><img
                 src="obtenerPorId.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de método Obtener Por Id"
               />
             </span>
           </div>
@@ -180,7 +193,7 @@
               ><img
                 src="actualizar.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de método Actualizar"
               />
             </span>
           </div>
@@ -191,13 +204,13 @@
               ><img
                 src="eliminar.png"
                 class="img-fluid rounded shadow-lg"
-                alt="Descripción de la imagen"
+                alt="Código de ejemplo de método Eliminar"
               />
             </span>
           </div>
         </div>
-      </div>
-      <div class="tab-pane" id="Properities">
+        
+        <div class="tab-pane" id="properities">
           <h1>Properities</h1>
           <p>
             <p class="text-primary"># H2 en memoria</p>
@@ -214,27 +227,21 @@
             <p class="text-primary"># Consola web de H2</p>
             <p>spring.h2.console.enabled=true</p>
             <p>spring.h2.console.path=/h2-console</p>
-            groupId com.h2database groupId
-            artifactId h2 artifactId
-            scope runtime scope
-            dependency
+            <p class="text-primary"># Dependencia Maven (debe estar en pom.xml)</p>
+            <p>&lt;dependency&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&lt;groupId&gt;com.h2database&lt;/groupId&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;h2&lt;/artifactId&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&lt;scope&gt;runtime&lt;/scope&gt;</p>
+            <p>&lt;/dependency&gt;</p>
           </p>
         </div>
-    </div>
-    <script
+        
+      </div> </div> <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    
     <script src="app.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
